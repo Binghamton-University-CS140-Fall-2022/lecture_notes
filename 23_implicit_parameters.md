@@ -46,14 +46,14 @@ In Java, the object associated with the instantiation of a class is an ***implic
 - In the `r1.translate(int dx, int dy)` method call, the implicit argument allows the `translate` method to modify the correct
 `Rectangle` object
 - The code for translate can be written as
-	- `x = x+dy;`
+	- `x = x+dx;`
 	- `y = y+dy;`
 or
-	- `this.x = this.x+dy;`
+	- `this.x = this.x+dx;`
 	- `this.y = this.y+dy;`
 - They are synonymous to the compiler.
 	- And if the current value of `this` is a reference to `r1`, then the code executed is:
-		- `r1.x = r1.x+dy;`
+		- `r1.x = r1.x+dx;`
 		- `r1.y = r1.y+dy;`
 
 ### Key Takeaway: The reference is passed as if it were a parameter

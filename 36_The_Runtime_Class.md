@@ -49,6 +49,7 @@ Below is an example to showcase using the `RunTime` class.
 - Call `rt.gc()` and output the memory info
 - Allocate three more ***4GB*** `int` arrays and output the memory info
 
+``` java
 class exampleSystemAndRunTime
 {
 	public static void main(String[] args)
@@ -168,3 +169,4 @@ class exampleSystemAndRunTime
 		System.out.println();
 	}
 }
+```

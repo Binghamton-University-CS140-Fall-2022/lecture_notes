@@ -31,4 +31,11 @@ HashCodes for classes
 
 **Note:** The WeightedEdge implementation would be sufficient according to the last note, but it is possible two unequal WeightedEdges could have an equal hashCode. This could lead to decreased performance for hash tables, but would not break them.
 
-Another return value could be something like: fromVertex + 10 * toVertex, which, while less intuitive, would lead to unique hashCodes for our weightedEdges, which could make the performance of hash tables better.
+Another return value could be something like: fromVertex + 10 * toVertex, which, while less intuitive, would lead to less collisions for hashCodes involving our weightedEdges, which could make the performance of hash tables better. 
+
+Even this is not perfect though. Consider the following two edges:
+
+(100,2)
+(20,10) 
+
+Both would map to 120 here, so we see this doesn't work as a hashCode implementation in general.

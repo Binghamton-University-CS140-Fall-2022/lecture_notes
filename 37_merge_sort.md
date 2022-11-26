@@ -113,23 +113,34 @@ void BottomUpMerge(int[] arrayA, int left, int right, int end, int[] arrayB)
 		// We are heavily relying on lazy evaluation here.
 
 			// Case 1: If i < right is true and j >= end is false.
-			// This means we have not fully merged the left sublist nor the right sublist yet.
-			// So, the arrayA[i] <= arrayA[j] is evaluated, and dictates which element from either sublist we are going to grab next.
+			// This means we have not fully merged the left sublist 
+			// nor the right sublist yet.
+			// So, the arrayA[i] <= arrayA[j] is evaluated, and 
+			// dictates which element from either sublist we are going to grab next.
 
 			// Case 2: If i < right is true and j >= end is true.
-			// This means that we have fully merged the right sublist, but have not yet fully merged the left sublist.
-			// So, we fall into the if block to copy elements remaining in the left sublist that still need to be merged. 
-			// Note that the arrayA[i] <= arrayA[j] is not executed here due to lazy evaluation.
+			// This means that we have fully merged the right sublist, 
+			// but have not yet fully merged the left sublist.
+			// So, we fall into the if block to copy elements remaining 
+			// in the left sublist that still need to be merged. 
+			// Note that the arrayA[i] <= arrayA[j] is not executed here 
+			// due to lazy evaluation.
 
 			// Case 3: If i < right is false, and j >= end is false.
-			// This means that we have fully merged the left sublist, but have not yet fully merged the right sublist.
-			// So, we fall into the else block to copy elements remaining in the right sublist that still need to be merged.
-			// Note that the arrayA[i] <= arrayA[j] is not executed here due to lazy evaluation.
+			// This means that we have fully merged the left sublist, 
+			// but have not yet fully merged the right sublist.
+			// So, we fall into the else block to copy elements remaining 
+			// in the right sublist that still need to be merged.
+			// Note that the arrayA[i] <= arrayA[j] is not executed here 
+			// due to lazy evaluation.
 
 			// Case 4: If i < right is false, and j >= end is true.
-			// This means that we have fully merged both the left and right sublists, which means we are done.
-			// In reality, this case will never occur during execution, because the for loop goes from k = left to k < end.
-			// No matter what complicated order the merge occurs in, i and j will not both be incremented to the point
+			// This means that we have fully merged both 
+			// the left and right sublists, which means we are done.
+			// In reality, this case will never occur during execution, 
+			// because the for loop goes from k = left to k < end.
+			// No matter what complicated order the merge occurs in, 
+			// i and j will not both be incremented to the point
 			// where this case can occur.
 
 		if( (i < right) and ((j >= end) or (arrayA[i] <= arrayA[j])) )
@@ -157,7 +168,7 @@ void BottomUpMerge(int[] arrayA, int left, int right, int end, int[] arrayB)
 ### Brief note about the `copyArray` method
 
 - This is trivial so we don't bother to show the pseduo code here. 
-- Just copy the elements from the `workArray` into the `origArray`.
+- Just copy the elements from one array into the other, dictated by the order they are passed in via arguments.
 
 ## Time Complexity Analysis for Merge Sort 
 
@@ -236,7 +247,7 @@ void TopDownSplitMerge(int[] arrayA, int begin, int end, int[] arrayB)
 }
 ```
 
-### Sublties to note for Top Down Merge Sort
+### Subtleties to note for Top Down Merge Sort
 
 - The subarray to sort has indices [begin:end-1]
 - The recursive calls to `TopDownSplitMerge` swap `arrayA` and `arrayB`, so that they are always using the current good copy of the array

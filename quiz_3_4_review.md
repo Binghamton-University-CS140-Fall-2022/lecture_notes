@@ -43,6 +43,8 @@ Assume deletion of a node ***with two children*** involves utilizing the ***succ
 
 Assume each deletion is an ***isolated event*** in the questions below. In other words, assume the tree is in its shown state for each question, and the deletes ***do not persist*** from one question to the next.
 
+**Note:** During review in lecture, when we were talking about theoretically replacing a deleted node with its predecessor, I made a mistake answering that question. Enis brought up a good point. If we delete the light blue node, since it only has one child, we do **NOT** utilize the successor nor the predecessor. When deleting a node with only one child, we simply replace the deleted node with its lone child. Sorry for any confusion I may have caused there today.
+
 When answering "how would the BST's structure change" below, consider the following:
 - which colored node will replace the node being deleted?
 	- describe the replacing node's new parent / any new children as well.

@@ -39,7 +39,7 @@ BSTs will be tested ***heavily*** for the quiz. With that in mind, here are some
 
 ### Deletion
 
-Assume deletion involves utilizing the ***successor***, same as we did when implementing our BST for the associated program assignment.
+Assume deletion of a node ***with two children*** involves utilizing the ***successor***, same as we did when implementing our BST for the associated program assignment.
 
 Assume each deletion is an ***isolated event*** in the questions below. In other words, assume the tree is in its shown state for each question, and the deletes ***do not persist*** from one question to the next.
 

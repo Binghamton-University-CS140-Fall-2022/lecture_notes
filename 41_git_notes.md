@@ -118,7 +118,7 @@ Currently, we are not. Let's fix that.
 
 To put the local repo on github, we first need to make an empty repository on the github side. Doing so results in the following:
 
-![0](./pngs/empty_repo.png)
+![0](./pngs/git/empty_repo.png)
 
 We have created an existing repo already, so we opt for the later suggestion:
 

@@ -203,7 +203,7 @@ index e69de29..f3a39e8 100644
 shawn-bailey@bgmdevel:~/teaching/fall-2022/cs140
 ```
 
-**Note:** `HEAD^` is shorthand notation that says, we want to see the different to one commit that is previous to our current commit. The current commit is represented by `HEAD`
+**Note:** `HEAD^` is shorthand notation that says, we want to see the difference to one commit that is previous to our current commit. The current commit is represented by `HEAD`
 
 This is why, when we run `git rev-parse HEAD` we get the commit hash of our last commit created.
 
@@ -275,7 +275,7 @@ index e69de29..d7e23cb 100644
 shawn-bailey@bgmdevel:~/teaching/fall-2022/cs140/lecture_notes/last/test$ 
 ```
 
-As you can see from the diff, developer 2 did different stuff in `A.java` than file 1.
+As you can see from the diff, developer 2 did different stuff in `A.java` than developer 1.
 Let's see what happens when we try to pull now.
 
 ``` bash
@@ -345,7 +345,7 @@ Point being, merge conflicts are a necessary headache that needs to be dealt wit
 
 But what does a merge conflict look like?
 
-Here is what Dev 2's file looks like:
+Here is what Dev 2's file looks like while dealing with the merge conflict:
 
 ``` bash
 shawn-bailey@bgmdevel:~/teaching/fall-2022/cs140/lecture_notes/last/test$ git diff
@@ -405,7 +405,7 @@ Date:   Sun Dec 4 21:25:21 2022 -0500
     adding files A,B,C,D
 ```
 
-Note that the commit has produced when Dev 1 pushed up is showing up in Dev 2's `A.java` file.
+Note that the commit that was produced when Dev 1 pushed up is showing up in Dev 2's `A.java` file.
 
 Also, there is some way git denotes the changes both developers made:
 

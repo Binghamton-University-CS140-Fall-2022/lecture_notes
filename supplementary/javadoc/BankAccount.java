@@ -25,7 +25,7 @@ public class BankAccount
 	
 	/**
 	 * The class constructor. The checking and savings balance are initialized to zero.
-	 * @author dave
+	 * @author bailey
 	 * @version 0.99
 	 * @param ownerLastName the account owner's last name
 	 * @param ownerFirstName the account owner's first name
